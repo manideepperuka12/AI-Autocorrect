@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="AutoCorrect AI - AI-driven spelling, grammar and fluency improvement tool." />
+  <title>AutoCorrect AI | Smart Writing Assistant</title>
+  <link rel="stylesheet" href="static/style.css" />
+</head>
+<body>
+  <div class="page-shell">
+    <header class="navbar">
+      <a class="brand" href="#">
+        <span class="brand-mark">✦</span>
+        <span>
+          <strong>AutoCorrect AI</strong>
+          <small>Smart Writing Assistant</small>
+        </span>
+      </a>
+      <div class="nav-status"><span class="status-dot"></span> AI Engine Ready</div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="hero-copy">
+          <span class="eyebrow">AI-POWERED LANGUAGE TECHNOLOGY</span>
+          <h1>Write with confidence.<br><span>Let AI refine the details.</span></h1>
+          <p>
+            Detect typing mistakes, improve grammar, clean punctuation, and make your
+            writing more fluent in seconds.
+          </p>
+          <div class="hero-pills">
+            <span>✓ Spelling</span>
+            <span>✓ Grammar</span>
+            <span>✓ Fluency</span>
+            <span>✓ Punctuation</span>
+          </div>
+        </div>
+        <div class="hero-visual" aria-hidden="true">
+          <div class="ai-orbit orbit-one"></div>
+          <div class="ai-orbit orbit-two"></div>
+          <div class="ai-core">AI</div>
+          <div class="spark spark-a">✦</div>
+          <div class="spark spark-b">✧</div>
+          <div class="spark spark-c">✦</div>
+        </div>
+      </section>
+
+      <section class="workspace">
+        <div class="workspace-head">
+          <div>
+            <span class="section-kicker">WRITING WORKSPACE</span>
+            <h2>Polish your text</h2>
+          </div>
+          <div class="workspace-tools">
+            <button id="sampleBtn" class="btn btn-light">Try Sample</button>
+            <button id="clearBtn" class="btn btn-ghost">Clear</button>
+          </div>
+        </div>
+
+        <div class="editor-grid">
+          <article class="editor-card">
+            <div class="card-top">
+              <div class="card-title">
+                <span class="card-icon input-icon">Aa</span>
+                <div>
+                  <h3>Your text</h3>
+                  <p>Type or paste your content</p>
+                </div>
+              </div>
+              <span id="count" class="counter">0 words</span>
+            </div>
+
+            <textarea id="inputText" spellcheck="false"
+              placeholder="Start writing here...&#10;&#10;Example: i recieved teh mesage yesterday and dont know wich file you want."></textarea>
+
+            <div class="card-footer">
+              <span class="privacy">🔒 Your text stays in this session</span>
+              <button id="correctBtn" class="btn btn-primary">✦ Improve Text</button>
+            </div>
+          </article>
+
+          <article class="editor-card output-card">
+            <div class="card-top">
+              <div class="card-title">
+                <span class="card-icon output-icon">✓</span>
+                <div>
+                  <h3>Improved text</h3>
+                  <p>AI-refined result</p>
+                </div>
+              </div>
+              <button id="copyBtn" class="copy-btn">Copy</button>
+            </div>
+
+            <div id="correctedText" class="output-area">
+              <div class="empty-state">
+                <div class="empty-icon">✦</div>
+                <strong>Your improved text will appear here</strong>
+                <span>Enter a message and click “Improve Text”.</span>
+              </div>
+            </div>
+
+            <div id="summary" class="result-summary hidden"></div>
+          </article>
+        </div>
+
+        <div id="message" class="message hidden"></div>
+
+        <section class="insights hidden" id="insights">
+          <div class="insight-card score-card">
+            <div class="insight-head">
+              <span>Quality score</span>
+              <strong id="score">100</strong>
+            </div>
+            <div class="score-track"><span id="scoreBar" style="width:100%"></span></div>
+            <small>Based on detected writing issues</small>
+          </div>
+
+          <div class="insight-card">
+            <div class="metric-icon">Aa</div>
+            <div><strong id="spellingCount">0</strong><span>Spelling fixes</span></div>
+          </div>
+
+          <div class="insight-card">
+            <div class="metric-icon">G</div>
+            <div><strong id="grammarCount">0</strong><span>Grammar fixes</span></div>
+          </div>
+
+          <div class="insight-card">
+            <div class="metric-icon">¶</div>
+            <div><strong id="formatCount">0</strong><span>Formatting fixes</span></div>
+          </div>
+        </section>
+
+        <section class="changes-section hidden" id="changesSection">
+          <div class="section-head">
+            <div>
+              <span class="section-kicker">AI ANALYSIS</span>
+              <h2>Detected changes</h2>
+            </div>
+            <span id="changeCount" class="change-badge">0 changes</span>
+          </div>
+          <div id="changesList" class="changes-list"></div>
+        </section>
+      </section>
+
+      <section class="features">
+        <div class="feature">
+          <span class="feature-icon">✦</span>
+          <div><strong>Smart correction</strong><p>Identifies common typing and spelling errors.</p></div>
+        </div>
+        <div class="feature">
+          <span class="feature-icon">G</span>
+          <div><strong>Context-aware rules</strong><p>Handles common grammar and contractions.</p></div>
+        </div>
+        <div class="feature">
+          <span class="feature-icon">¶</span>
+          <div><strong>Clean formatting</strong><p>Improves spaces, punctuation and capitalization.</p></div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <span>AutoCorrect AI</span>
+      <span>AI-Driven NLP Project</span>
+      <span>Built for faster, clearer communication</span>
+    </footer>
+  </div>
+
+  <script src="static/script.js"></script>
+</body>
+</html>

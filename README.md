@@ -100,5 +100,7 @@ Planned enhancements for transitioning this demonstration into a production-leve
 * Migrating the lightweight correction engine to a dedicated transformer-based grammar model.
 * Implementing user authentication and secure profile routing.
 * Integrating MongoDB to store, log, and manage user writing histories.
+
+<img src="Screenshot (76).png" alt="AutoCorrect AI Screenshot" width="600">
 * Expanding localization to support multi-language text corrections.
 * Deploying the application stack to a cloud platform (e.g., AWS, Heroku, or GCP).
